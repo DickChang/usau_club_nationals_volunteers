@@ -1,152 +1,128 @@
-Job,Job Location,Shift start date,Shift start time,Shift end time,Spots
-Admissions staff,Polo Fields,2021-10-21,7:15 AM,11:00 AM,3
-Admissions staff,Polo Fields,2021-10-21,11:00 AM,2:00 PM,3
-Admissions staff,Polo Fields,2021-10-21,2:00 PM,5:00 PM,3
-Admissions staff,Polo Fields,2021-10-22,7:15 AM,11:00 AM,3
-Admissions staff,Polo Fields,2021-10-22,11:00 AM,2:00 PM,3
-Admissions staff,Polo Fields,2021-10-22,2:00 PM,5:00 PM,3
-Admissions staff,Polo Fields,2021-10-23,7:15 AM,11:00 AM,3
-Admissions staff,Stadium,2021-10-23,10:15 AM,1:30 PM,2
-Admissions staff,Stadium,2021-10-23,1:30 PM,4:30 PM,3
-Admissions staff,Stadium,2021-10-23,4:30 PM,7:30 PM,2
-Admissions staff,Stadium,2021-10-23,7:30 PM,10:45 PM,2
-Admissions staff,Stadium,2021-10-24,8:30 AM,11:30 AM,3
-Admissions staff,Stadium,2021-10-24,11:30 AM,2:30 PM,3
-Admissions staff,Stadium,2021-10-24,2:30 PM,5:45 PM,2
-Crowd Management,Stadium,2021-10-23,11:45 AM,1:15 PM,4
-Crowd Management,Stadium,2021-10-23,8:00 PM,9:45 PM,4
-Crowd Management,Stadium,2021-10-24,10:00 AM,11:45 AM,4
-Crowd Management,Stadium,2021-10-24,12:30 PM,2:15 PM,4
-Crowd Management,Stadium,2021-10-24,3:00 PM,4:45 PM,4
-Dude Booth Staff,Polo Fields,2021-10-21,8:00 AM,11:00 AM,1
-Dude Booth Staff,Polo Fields,2021-10-21,11:00 AM,2:00 PM,1
-Dude Booth Staff,Polo Fields,2021-10-21,2:00 PM,5:30 PM,1
-Dude Booth Staff,Polo Fields,2021-10-22,8:00 AM,11:00 AM,1
-Dude Booth Staff,Polo Fields,2021-10-22,11:00 AM,2:00 PM,1
-Dude Booth Staff,Polo Fields,2021-10-22,2:00 PM,5:30 PM,1
-Dude Booth Staff,Polo Fields,2021-10-23,8:00 AM,12:00 PM,1
-Dude Booth Staff,Stadium,2021-10-23,10:45 AM,2:30 PM,1
-Dude Booth Staff,Stadium,2021-10-23,2:30 PM,6:30 PM,2
-Dude Booth Staff,Stadium,2021-10-23,6:30 PM,9:30 PM,1
-Dude Booth Staff,Stadium,2021-10-24,8:30 AM,12:30 PM,1
-Dude Booth Staff,Stadium,2021-10-24,12:30 PM,5:00 PM,1
-Field Setup/Teardown,Polo Fields,2021-10-20,9:00 AM,11:00 AM,2
-Field Setup/Teardown,Polo Fields,2021-10-23,11:00 AM,1:00 PM,10
-Field Setup/Teardown,Stadium,2021-10-24,4:45 PM,6:45 PM,6
-Fields & Water Crew,Polo Fields,2021-10-21,8:15 AM,11:30 AM,6
-Fields & Water Crew,Polo Fields,2021-10-21,11:30 AM,3:00 PM,4
-Fields & Water Crew,Polo Fields,2021-10-21,3:00 PM,6:30 PM,6
-Fields & Water Crew,Polo Fields,2021-10-22,8:15 AM,11:30 AM,6
-Fields & Water Crew,Polo Fields,2021-10-22,11:30 AM,3:00 PM,4
-Fields & Water Crew,Polo Fields,2021-10-22,3:00 PM,7:00 PM,6
-Fields & Water Crew,Polo Fields,2021-10-23,8:15 AM,10:45 AM,4
-Fields & Water Crew,Stadium,2021-10-23,10:15 AM,2:00 PM,2
-Fields & Water Crew,Polo Fields,2021-10-23,10:45 AM,1:00 PM,6
-Fields & Water Crew,Stadium,2021-10-23,2:00 PM,5:00 PM,2
-Fields & Water Crew,Stadium,2021-10-23,5:00 PM,7:30 PM,2
-Fields & Water Crew,Stadium,2021-10-23,7:30 PM,11:00 PM,2
-Fields & Water Crew,Stadium,2021-10-24,8:30 AM,12:00 PM,2
-Fields & Water Crew,Stadium,2021-10-24,12:00 PM,3:30 PM,2
-Fields & Water Crew,Stadium,2021-10-24,3:30 PM,6:00 PM,2
-Hospitality driver,Polo Fields,2021-10-21,8:00 AM,1:00 PM,2
-Hospitality driver,Polo Fields,2021-10-21,1:00 PM,6:00 PM,2
-Hospitality driver,Polo Fields,2021-10-22,8:00 AM,1:00 PM,2
-Hospitality driver,Polo Fields,2021-10-22,1:00 PM,6:00 PM,2
-Hospitality driver,Polo Fields,2021-10-23,8:00 AM,12:00 PM,2
-Hospitality driver,Stadium,2021-10-23,11:00 AM,2:30 PM,1
-Hospitality driver,Stadium,2021-10-23,2:30 PM,6:30 PM,1
-Hospitality driver,Stadium,2021-10-23,6:30 PM,10:00 PM,1
-Hospitality driver,Stadium,2021-10-24,9:00 AM,1:00 PM,1
-Hospitality driver,Stadium,2021-10-24,1:00 PM,5:00 PM,1
-Miscellaneous,Polo Fields,2021-10-21,8:45 AM,11:00 AM,3
-Miscellaneous,Polo Fields,2021-10-21,11:00 AM,1:15 PM,3
-Miscellaneous,Polo Fields,2021-10-21,1:15 PM,3:30 PM,3
-Miscellaneous,Polo Fields,2021-10-21,3:30 PM,5:45 PM,3
-Miscellaneous,Polo Fields,2021-10-22,8:45 AM,11:00 AM,3
-Miscellaneous,Polo Fields,2021-10-22,11:45 AM,1:30 PM,3
-Miscellaneous,Polo Fields,2021-10-22,1:30 PM,3:45 PM,3
-Miscellaneous,Polo Fields,2021-10-22,3:45 PM,6:00 PM,3
-Miscellaneous,Polo Fields,2021-10-23,8:45 AM,11:45 AM,3
-Miscellaneous,Stadium,2021-10-23,10:30 AM,1:30 PM,2
-Miscellaneous,Stadium,2021-10-23,1:30 PM,4:30 PM,2
-Miscellaneous,Stadium,2021-10-23,4:30 PM,7:30 PM,2
-Miscellaneous,Stadium,2021-10-23,7:30 PM,10:00 PM,2
-Miscellaneous,Stadium,2021-10-24,8:30 AM,11:30 AM,2
-Miscellaneous,Stadium,2021-10-24,11:30 AM,2:30 PM,2
-Miscellaneous,Stadium,2021-10-24,2:30 PM,5:30 PM,2
-Scorekeeper,Polo Fields,2021-10-21,9:00 AM,10:45 AM,18
-Scorekeeper,Polo Fields,2021-10-21,11:15 AM,1:00 PM,18
-Scorekeeper,Polo Fields,2021-10-21,1:30 PM,3:15 PM,18
-Scorekeeper,Polo Fields,2021-10-21,3:45 PM,5:30 PM,18
-Scorekeeper,Polo Fields,2021-10-22,9:00 AM,10:45 AM,18
-Scorekeeper,Polo Fields,2021-10-22,11:45 AM,1:30 PM,18
-Scorekeeper,Polo Fields,2021-10-22,2:00 PM,3:45 PM,12
-Scorekeeper,Polo Fields,2021-10-22,4:15 PM,6:00 PM,12
-Scorekeeper,Polo Fields,2021-10-23,9:00 AM,10:45 AM,16
-Scorekeeper,Polo Fields,2021-10-23,10:00 AM,11:45 AM,6
-Scorekeeper,Polo Fields,2021-10-23,11:15 AM,1:00 PM,2
-Scorekeeper,Polo Fields,2021-10-24,9:45 AM,12:00 PM,3
-Scorekeeper Stadium,Stadium,2021-10-23,11:45 AM,2:30 PM,1
-Scorekeeper Stadium,Stadium,2021-10-23,2:15 PM,5:30 PM,1
-Scorekeeper Stadium,Stadium,2021-10-23,5:15 PM,8:00 PM,1
-Scorekeeper Stadium,Stadium,2021-10-23,7:45 PM,10:30 PM,1
-Scorekeeper Stadium,Stadium,2021-10-24,9:45 AM,12:30 PM,1
-Scorekeeper Stadium,Stadium,2021-10-24,12:15 PM,3:00 PM,1
-Scorekeeper Stadium,Stadium,2021-10-24,2:45 PM,5:30 PM,1
-Statkeeper,Polo Fields,2021-10-21,9:00 AM,10:45 AM,19
-Statkeeper,Polo Fields,2021-10-21,11:15 AM,1:00 PM,19
-Statkeeper,Polo Fields,2021-10-21,1:30 PM,3:15 PM,19
-Statkeeper,Polo Fields,2021-10-21,3:45 PM,5:30 PM,19
-Statkeeper,Polo Fields,2021-10-22,9:00 AM,10:45 AM,19
-Statkeeper,Polo Fields,2021-10-22,11:45 AM,1:30 PM,19
-Statkeeper,Polo Fields,2021-10-22,2:00 PM,3:45 PM,13
-Statkeeper,Polo Fields,2021-10-22,4:15 PM,6:00 PM,13
-Statkeeper,Polo Fields,2021-10-23,9:00 AM,10:45 AM,16
-Statkeeper,Polo Fields,2021-10-23,11:15 AM,1:00 PM,2
-Statkeeper,Polo Fields,2021-10-24,9:45 AM,12:00 PM,3
-Statkeeper (Semis/Finals),Polo Fields,2021-10-23,10:00 AM,11:45 AM,5
-Statkeeper (Semis/Finals),Stadium,2021-10-23,11:45 AM,1:15 PM,5
-Statkeeper (Semis/Finals),Stadium,2021-10-23,2:15 PM,4:00 PM,5
-Statkeeper (Semis/Finals),Stadium,2021-10-23,5:15 PM,7:15 PM,5
-Statkeeper (Semis/Finals),Stadium,2021-10-23,7:45 PM,9:45 PM,5
-Statkeeper (Semis/Finals),Stadium,2021-10-24,9:45 AM,11:45 AM,5
-Statkeeper (Semis/Finals),Stadium,2021-10-24,12:15 PM,2:15 PM,5
-Statkeeper (Semis/Finals),Stadium,2021-10-24,2:45 PM,4:45 PM,5
-Store runner,Polo Fields,2021-10-21,7:00 AM,12:00 PM,1
-Store runner,Polo Fields,2021-10-21,12:00 PM,5:00 PM,1
-Store runner,Polo Fields,2021-10-22,7:00 AM,12:00 PM,1
-Store runner,Polo Fields,2021-10-22,12:00 PM,5:00 PM,1
-Store runner,Polo Fields,2021-10-23,7:00 AM,12:00 PM,1
-Store runner,Stadium,2021-10-23,10:30 AM,3:30 PM,1
-Store runner,Stadium,2021-10-23,3:30 PM,7:30 PM,1
-Store runner,Stadium,2021-10-24,8:30 AM,1:30 PM,1
-Youth Clinic Assistant Coach,Polo Fields,2021-10-23,8:45 AM,11:00 AM,4
-Statkeeper (Ultiworld),Polo Fields,2021-10-21,9:00 AM,10:45 AM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-21,11:15 AM,1:00 PM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-21,1:30 PM,3:15 PM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-21,3:45 PM,5:30 PM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-22,9:00 AM,10:45 AM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-22,11:45 AM,1:30 PM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-22,2:00 PM,3:45 PM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-22,4:15 PM,6:00 PM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-23,9:00 AM,10:45 AM,2
-Statkeeper (Ultiworld),Polo Fields,2021-10-23,11:15 AM,1:00 PM,2
-Snack Master,Polo Fields,2021-10-21,8:45 AM,11:00 AM,1
-Snack Master,Polo Fields,2021-10-21,11:00 AM,1:15 PM,1
-Snack Master,Polo Fields,2021-10-21,1:15 PM,3:30 PM,1
-Snack Master,Polo Fields,2021-10-21,3:30 PM,5:45 PM,1
-Snack Master,Polo Fields,2021-10-22,8:45 AM,11:00 AM,1
-Snack Master,Polo Fields,2021-10-22,11:00 AM,1:15 PM,1
-Snack Master,Polo Fields,2021-10-22,1:15 PM,3:30 PM,1
-Snack Master,Polo Fields,2021-10-22,3:30 PM,6:15 PM,1
-Snack Master,Polo Fields,2021-10-23,8:45 AM,11:00 AM,1
-Snack Master,Polo Fields,2021-10-23,11:00 AM,1:15 PM,1
-Snack Master,Stadium,2021-10-23,11:30 AM,2:00 PM,1
-Snack Master,Stadium,2021-10-23,2:00 PM,5:15 PM,1
-Snack Master,Stadium,2021-10-23,5:15 PM,7:30 PM,1
-Snack Master,Stadium,2021-10-23,7:30 PM,10:00 PM,1
-Snack Master,Stadium,2021-10-23,5:00 PM,7:30 PM,4
-Snack Master,Stadium,2021-10-23,7:30 PM,10:00 PM,4
-Snack Master,Stadium,2021-10-24,9:30 AM,12:00 PM,1
-Snack Master,Stadium,2021-10-24,12:00 PM,2:30 PM,1
-Snack Master,Stadium,2021-10-24,2:30 PM,5:00 PM,1
+Job,Job Location,Shift start date,Shift start time,Shift end time,Spots,Duration
+Admissions staff,Polo Fields,2022-10-20,7:15 AM,11:00 AM,3,3:45:00
+Admissions staff,Polo Fields,2022-10-20,10:45 AM,1:00 PM,3,2:15:00
+Admissions staff,Polo Fields,2022-10-20,12:45 PM,3:00 PM,3,2:15:00
+Admissions staff,Polo Fields,2022-10-20,2:45 PM,5:00 PM,3,2:15:00
+Admissions staff,Polo Fields,2022-10-21,7:15 AM,11:00 AM,3,3:45:00
+Admissions staff,Polo Fields,2022-10-21,10:45 AM,1:00 PM,3,2:15:00
+Admissions staff,Polo Fields,2022-10-21,12:45 PM,3:00 PM,3,2:15:00
+Admissions staff,Polo Fields,2022-10-21,2:45 PM,5:00 PM,3,2:15:00
+Admissions staff,Polo Fields,2022-10-22,7:15 AM,11:00 AM,3,3:45:00
+Admissions staff,Polo Fields,2022-10-22,10:45 AM,1:00 PM,3,2:15:00
+Admissions staff,Stadium,2022-10-22,10:45 AM,2:30 PM,3,3:45:00
+Admissions staff,Stadium,2022-10-22,2:15 PM,5:30 PM,3,3:15:00
+Admissions staff,Stadium,2022-10-22,5:15 PM,8:00 PM,3,2:45:00
+Admissions staff,Stadium,2022-10-22,7:45 PM,10:00 PM,3,2:15:00
+Admissions staff,Stadium,2022-10-23,8:45 AM,12:30 PM,3,3:45:00
+Admissions staff,Stadium,2022-10-23,12:15 PM,3:00 PM,3,2:45:00
+Admissions staff,Stadium,2022-10-23,2:45 PM,5:30 PM,3,2:45:00
+Crowd Management,Stadium,2022-10-22,11:15 AM,2:00 PM,5,2:45:00
+Crowd Management,Stadium,2022-10-22,2:00 PM,4:30 PM,5,2:30:00
+Crowd Management,Stadium,2022-10-22,4:30 PM,7:00 PM,5,2:30:00
+Crowd Management,Stadium,2022-10-22,7:00 PM,10:00 PM,5,3:00:00
+Crowd Management,Stadium,2022-10-23,9:30 AM,12:30 PM,5,3:00:00
+Crowd Management,Stadium,2022-10-23,12:30 PM,3:00 PM,5,2:30:00
+Crowd Management,Stadium,2022-10-23,2:45 PM,5:30 PM,5,2:45:00
+Field Setup/Teardown,Polo Fields,2022-10-19,9:00 AM,11:00 AM,6,2:00:00
+Field Setup/Teardown,Stadium,2022-10-21,9:00 AM,12:00 PM,2,3:00:00
+Field Setup/Teardown,Stadium,2022-10-21,12:00 PM,3:00 PM,2,3:00:00
+Field Setup/Teardown,Polo Fields,2022-10-22,11:00 AM,1:00 PM,10,2:00:00
+Field Setup/Teardown,Stadium,2022-10-23,4:30 PM,6:15 PM,10,1:45:00
+Fields & Water Crew,Polo Fields,2022-10-20,8:15 AM,11:30 AM,2,3:15:00
+Fields & Water Crew,Polo Fields,2022-10-20,11:30 AM,3:00 PM,2,3:30:00
+Fields & Water Crew,Polo Fields,2022-10-20,3:00 PM,6:30 PM,2,3:30:00
+Fields & Water Crew,Polo Fields,2022-10-21,8:15 AM,11:30 AM,2,3:15:00
+Fields & Water Crew,Polo Fields,2022-10-21,11:30 AM,3:00 PM,2,3:30:00
+Fields & Water Crew,Polo Fields,2022-10-21,3:00 PM,7:00 PM,2,4:00:00
+Fields & Water Crew,Polo Fields,2022-10-22,8:15 AM,11:30 AM,2,3:15:00
+Fields & Water Crew,Polo Fields,2022-10-22,10:45 AM,1:00 PM,2,2:15:00
+Fields & Water Crew,Stadium,2022-10-22,10:15 AM,2:00 PM,2,3:45:00
+Fields & Water Crew,Stadium,2022-10-22,2:00 PM,4:30 PM,2,2:30:00
+Fields & Water Crew,Stadium,2022-10-22,4:30 PM,7:00 PM,2,2:30:00
+Fields & Water Crew,Stadium,2022-10-22,7:00 PM,11:00 PM,2,4:00:00
+Fields & Water Crew,Stadium,2022-10-23,8:30 AM,12:00 PM,2,3:30:00
+Fields & Water Crew,Stadium,2022-10-23,12:00 PM,3:30 PM,2,3:30:00
+Fields & Water Crew,Stadium,2022-10-23,3:30 PM,6:00 PM,2,2:30:00
+Hospitality driver,Polo Fields,2022-10-20,8:00 AM,1:00 PM,2,5:00:00
+Hospitality driver,Polo Fields,2022-10-20,1:00 PM,6:00 PM,2,5:00:00
+Hospitality driver,Polo Fields,2022-10-21,8:00 AM,1:00 PM,2,5:00:00
+Hospitality driver,Polo Fields,2022-10-21,1:00 PM,6:00 PM,2,5:00:00
+Hospitality driver,Polo Fields,2022-10-22,8:00 AM,12:00 PM,2,4:00:00
+Hospitality driver,Stadium,2022-10-22,11:00 AM,2:30 PM,1,3:30:00
+Hospitality driver,Stadium,2022-10-22,2:30 PM,6:30 PM,1,4:00:00
+Hospitality driver,Stadium,2022-10-22,6:30 PM,10:00 PM,1,3:30:00
+Hospitality driver,Stadium,2022-10-23,9:00 AM,1:00 PM,1,4:00:00
+Hospitality driver,Stadium,2022-10-23,1:00 PM,5:00 PM,1,4:00:00
+Miscellaneous,Polo Fields,2022-10-20,8:45 AM,11:00 AM,3,2:15:00
+Miscellaneous,Polo Fields,2022-10-20,11:00 AM,1:15 PM,3,2:15:00
+Miscellaneous,Polo Fields,2022-10-20,1:15 PM,3:30 PM,3,2:15:00
+Miscellaneous,Polo Fields,2022-10-20,3:30 PM,5:45 PM,3,2:15:00
+Miscellaneous,Polo Fields,2022-10-21,8:45 AM,11:00 AM,3,2:15:00
+Miscellaneous,Polo Fields,2022-10-21,11:45 AM,1:30 PM,3,1:45:00
+Miscellaneous,Polo Fields,2022-10-21,1:30 PM,3:45 PM,3,2:15:00
+Miscellaneous,Polo Fields,2022-10-21,3:45 PM,6:00 PM,3,2:15:00
+Miscellaneous,Polo Fields,2022-10-22,8:45 AM,11:45 AM,3,3:00:00
+Miscellaneous,Stadium,2022-10-22,10:30 AM,1:30 PM,2,3:00:00
+Miscellaneous,Stadium,2022-10-22,1:30 PM,4:30 PM,2,3:00:00
+Miscellaneous,Stadium,2022-10-22,4:30 PM,7:30 PM,2,3:00:00
+Miscellaneous,Stadium,2022-10-22,7:30 PM,10:00 PM,2,2:30:00
+Miscellaneous,Stadium,2022-10-23,8:30 AM,11:30 AM,2,3:00:00
+Miscellaneous,Stadium,2022-10-23,11:30 AM,2:30 PM,2,3:00:00
+Miscellaneous,Stadium,2022-10-23,2:30 PM,5:30 PM,2,3:00:00
+Scorekeeper,Polo Fields,2022-10-20,8:45 AM,10:45 AM,18,2:00:00
+Scorekeeper,Polo Fields,2022-10-20,11:00 AM,1:00 PM,18,2:00:00
+Scorekeeper,Polo Fields,2022-10-20,1:15 PM,3:15 PM,18,2:00:00
+Scorekeeper,Polo Fields,2022-10-20,3:30 PM,5:30 PM,18,2:00:00
+Scorekeeper,Polo Fields,2022-10-21,8:45 AM,10:45 AM,18,2:00:00
+Scorekeeper,Polo Fields,2022-10-21,11:30 AM,1:30 PM,18,2:00:00
+Scorekeeper,Polo Fields,2022-10-21,1:45 PM,3:45 PM,12,2:00:00
+Scorekeeper,Polo Fields,2022-10-21,4:00 PM,6:00 PM,12,2:00:00
+Scorekeeper,Polo Fields,2022-10-22,8:45 AM,10:45 AM,9,2:00:00
+Scorekeeper,Polo Fields,2022-10-22,9:45 AM,11:45 AM,6,2:00:00
+Scorekeeper,Polo Fields,2022-10-22,11:00 AM,1:00 PM,3,2:00:00
+Scorekeeper (Semis/Finals),Polo Fields,2022-10-22,9:45 AM,11:45 AM,2,2:00:00
+Scorekeeper (Semis/Finals),Stadium,2022-10-22,11:45 AM,1:45 PM,1,2:00:00
+Scorekeeper (Semis/Finals),Stadium,2022-10-22,2:15 PM,4:30 PM,1,2:15:00
+Scorekeeper (Semis/Finals),Stadium,2022-10-22,5:15 PM,7:15 PM,1,2:00:00
+Scorekeeper (Semis/Finals),Stadium,2022-10-22,7:45 PM,9:45 PM,1,2:00:00
+Scorekeeper (Semis/Finals),Stadium,2022-10-23,9:45 AM,11:45 AM,1,2:00:00
+Scorekeeper (Semis/Finals),Stadium,2022-10-23,12:15 PM,2:15 PM,1,2:00:00
+Scorekeeper (Semis/Finals),Stadium,2022-10-23,2:45 PM,4:45 PM,1,2:00:00
+Statkeeper,Polo Fields,2022-10-20,8:45 AM,10:45 AM,18,2:00:00
+Statkeeper,Polo Fields,2022-10-20,11:00 AM,1:00 PM,18,2:00:00
+Statkeeper,Polo Fields,2022-10-20,1:15 PM,3:15 PM,18,2:00:00
+Statkeeper,Polo Fields,2022-10-20,3:30 PM,5:30 PM,18,2:00:00
+Statkeeper,Polo Fields,2022-10-21,8:45 AM,10:45 AM,18,2:00:00
+Statkeeper,Polo Fields,2022-10-21,11:30 AM,1:30 PM,18,2:00:00
+Statkeeper,Polo Fields,2022-10-21,1:45 PM,3:45 PM,12,2:00:00
+Statkeeper,Polo Fields,2022-10-21,4:00 PM,6:00 PM,12,2:00:00
+Statkeeper,Polo Fields,2022-10-22,8:45 AM,10:45 AM,9,2:00:00
+Statkeeper,Polo Fields,2022-10-22,9:45 AM,11:45 AM,6,2:00:00
+Statkeeper,Polo Fields,2022-10-22,11:00 AM,1:00 PM,3,2:00:00
+Statkeeper (Semis/Finals),Polo Fields,2022-10-22,9:45 AM,11:45 AM,8,2:00:00
+Statkeeper (Semis/Finals),Stadium,2022-10-22,11:45 AM,1:45 PM,5,2:00:00
+Statkeeper (Semis/Finals),Stadium,2022-10-22,2:15 PM,4:30 PM,5,2:15:00
+Statkeeper (Semis/Finals),Stadium,2022-10-22,5:15 PM,7:15 PM,5,2:00:00
+Statkeeper (Semis/Finals),Stadium,2022-10-22,7:45 PM,9:45 PM,5,2:00:00
+Statkeeper (Semis/Finals),Stadium,2022-10-23,9:45 AM,11:45 AM,5,2:00:00
+Statkeeper (Semis/Finals),Stadium,2022-10-23,12:15 PM,2:15 PM,5,2:00:00
+Statkeeper (Semis/Finals),Stadium,2022-10-23,2:45 PM,4:45 PM,5,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-20,8:45 AM,10:45 AM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-20,11:00 AM,1:00 PM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-20,1:15 PM,3:15 PM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-20,3:30 PM,5:30 PM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-21,8:45 AM,10:45 AM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-21,11:15 AM,1:15 PM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-21,1:45 PM,3:45 PM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-21,4:00 PM,6:00 PM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-22,8:45 AM,10:45 AM,2,2:00:00
+Statkeeper (Ultiworld),Polo Fields,2022-10-22,11:00 AM,1:00 PM,2,2:00:00
+Store runner,Polo Fields,2022-10-20,7:00 AM,12:00 PM,1,5:00:00
+Store runner,Polo Fields,2022-10-20,12:00 PM,5:00 PM,1,5:00:00
+Store runner,Polo Fields,2022-10-21,7:00 AM,12:00 PM,1,5:00:00
+Store runner,Polo Fields,2022-10-21,12:00 PM,5:00 PM,1,5:00:00
+Store runner,Polo Fields,2022-10-22,7:00 AM,12:00 PM,1,5:00:00
+Store runner,Stadium,2022-10-22,10:30 AM,3:30 PM,1,5:00:00
+Store runner,Stadium,2022-10-22,3:30 PM,7:30 PM,1,4:00:00
+Store runner,Stadium,2022-10-23,8:30 AM,1:30 PM,1,5:00:00
+Youth Clinic Assistant Coach,Polo Fields,2022-10-22,8:45 AM,11:00 AM,4,2:15:00

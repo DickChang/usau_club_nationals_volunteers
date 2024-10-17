@@ -2,6 +2,7 @@ import csv
 import time
 import pandas
 import pygsheets
+from functools import reduce
 
 # returns time difference in hours
 # only works on "sortable" timestamp formats
@@ -46,11 +47,11 @@ for v in volunteers.index:
     tshirt = ""
     if volunteers.at[v, "(Tshirt size (unisex)) XS"] == "X":
         tshirt = "XS"
-    elif volunteers.at[v, "(Tshirt size (unisex)) S "] == "X":
+    elif volunteers.at[v, "(Tshirt size (unisex)) S"] == "X":
         tshirt = "S"
-    elif volunteers.at[v, "(Tshirt size (unisex)) M "] == "X":
+    elif volunteers.at[v, "(Tshirt size (unisex)) M"] == "X":
         tshirt = "M"
-    elif volunteers.at[v, "(Tshirt size (unisex)) L "] == "X":
+    elif volunteers.at[v, "(Tshirt size (unisex)) L"] == "X":
         tshirt = "L"
     elif volunteers.at[v, "(Tshirt size (unisex)) XL"] == "X":
         tshirt = "XL"
@@ -76,9 +77,9 @@ for v in volunteers.index:
 # delete the extra tshirt columns
 volunteers = volunteers.drop(columns=[
     '(Tshirt size (unisex)) XS',
-    '(Tshirt size (unisex)) S ',
-    '(Tshirt size (unisex)) M ',
-    '(Tshirt size (unisex)) L ',
+    '(Tshirt size (unisex)) S',
+    '(Tshirt size (unisex)) M',
+    '(Tshirt size (unisex)) L',
     '(Tshirt size (unisex)) XL',
     '(Tshirt size (unisex)) XXL',
     '(Tshirt size (unisex)) XXXL'
@@ -91,6 +92,11 @@ tshirt_count = pandas.DataFrame({"Size": tshirt_count.index, "Count": tshirt_cou
 # count the number of unique volunteers per day
 unique_v = (volunteers.groupby(['Shift start date','Job Location'], as_index=False)['Volunteer Identifier']).nunique()
 unique_v = unique_v.rename(columns={"Volunteer Identifier": "Unique Volunteers"})
+
+# TODO
+# count the number of filled slots per day
+#unique_per_day = pandas.DataFrame[volunteers['Shift start date'] == "2022-10-20" & volunteers['Job Location'] == "Polo Fields"]
+#print(unique_per_day)
 
 # count the number of hours worked per volunteer
 hours_worked = (volunteers.groupby(['Volunteer Identifier','First Name', 'Last Name', 'Requests? '], as_index=False)['Shift Duration']).sum()
@@ -108,16 +114,22 @@ avg_shifts_worked = (hours_worked.loc[:,"Num Shifts"].sum()) / len(hours_worked)
 key_columns = ["Shift start date",
     "Job Location",
     "Shift start time",
+    "Job",
+    "First Name"]
+key_columns_2 = ["Shift start date",
+    "Job Location",
+    "Shift start time",
     "Job"]
 volunteers = volunteers.sort_values(
     key_columns,
-    ascending = (True, True, True, True))
+    ascending = (True, True, True, True, True))
 
 # change the timestamp to a readable format
 volunteers['Shift start time'] = volunteers.apply(lambda row : convert_time(row['Shift start time'], False), axis = 1)
 volunteers['Shift end time'] = volunteers.apply(lambda row : convert_time(row['Shift end time'], False), axis = 1)
 
 volunteers = (volunteers.reset_index()).drop(columns="index")
+
 
 #####
 # read in all_jobs
@@ -131,10 +143,14 @@ for i, r in all_jobs_raw.iterrows():
 all_jobs = (all_jobs.reset_index()).drop(columns="index")
 
 all_jobs['Shift start time'] = all_jobs.apply(lambda row : convert_time(row['Shift start time'], True), axis = 1)
+all_jobs['Shift end time'] = all_jobs.apply(lambda row : convert_time(row['Shift end time'], True), axis = 1)
 all_jobs = all_jobs.sort_values(
-    key_columns,
+    key_columns_2,
     ascending = (True, True, True, True))
+# calculate the shift duration
+all_jobs["Shift Duration"] = all_jobs.apply(lambda row: calc_time_diff(row["Shift start time"], row["Shift end time"]), axis = 1)
 all_jobs['Shift start time'] = all_jobs.apply(lambda row : convert_time(row['Shift start time'], False), axis = 1)
+all_jobs['Shift end time'] = all_jobs.apply(lambda row : convert_time(row['Shift end time'], False), axis = 1)
 
 
 # create the master list by aligning the job list with the volunteer registrations
@@ -149,6 +165,7 @@ for index_j in range(len(all_jobs)):
     found = False
     for index_v, row in temp_v.iterrows():
         if(compare_jobs(row, all_jobs.loc[index_j])):
+            row['Duration'] = all_jobs.loc[index_j]['Duration']
             master_list = master_list.append(row)
             temp_v = temp_v.drop(index_v)
             found = True
@@ -165,10 +182,14 @@ if(len(temp_v) != 0):
 master_list = master_list.fillna(value="")
 master_list['Job Location'] = master_list.apply(lambda row : row['Job Location'].title(), axis = 1)
 master_list['Shift start time'] = master_list.apply(lambda row : convert_time(row['Shift start time'], True), axis = 1)
+master_list['Shift end time'] = master_list.apply(lambda row : convert_time(row['Shift end time'], True), axis = 1)
 master_list = master_list.sort_values(
     key_columns,
-    ascending = (True, True, True, True))
+    ascending = (True, True, True, True, True))
+# calculate the shift duration
+master_list["Shift Duration"] = master_list.apply(lambda row: calc_time_diff(row["Shift start time"], row["Shift end time"]), axis = 1)
 master_list['Shift start time'] = master_list.apply(lambda row : convert_time(row['Shift start time'], False), axis = 1)
+master_list['Shift end time'] = master_list.apply(lambda row : convert_time(row['Shift end time'], False), axis = 1)
 
 # get all the email addresses based on signup date/time
 emails = volunteers.copy()
@@ -183,14 +204,62 @@ emails = emails.sort_values(
 emails['Signup Time'] = emails.apply(lambda row : convert_time(row['Signup Time'], False), axis = 1)
 emails = emails.drop_duplicates(subset=['Email'])
 
+# Calculate the filled slots stats
+slots_per_day = (master_list.groupby(['Shift start date','Job Location'], as_index=False).agg(['count']))[[('Event','count')]]
+slots_per_day.columns = slots_per_day.columns.get_level_values(0) + '_' +  slots_per_day.columns.get_level_values(1)
+slots_per_day = [x for x in slots_per_day["Event_count"]]
 
+filled_slots_per_day = (volunteers.groupby(['Shift start date','Job Location'], as_index=False).agg(['count']))[[('Event','count')]]
+filled_slots_per_day.columns = filled_slots_per_day.columns.get_level_values(0) + '_' +  filled_slots_per_day.columns.get_level_values(1)
+filled_slots_per_day = [x for x in filled_slots_per_day["Event_count"]]
 
+# get all the unique date/location combos and align the "filled_slots_per_day" data by filling the empty day/locations with 0
+unique_dates_and_locations = master_list.groupby(['Shift start date','Job Location'], as_index=False).agg(['unique'])
+unique_dates_and_locations = (unique_dates_and_locations.drop(unique_dates_and_locations.iloc[2:],axis = 1)).index
+filled_dates_and_locations = volunteers.groupby(['Shift start date','Job Location'], as_index=False).agg(['unique'])
+filled_dates_and_locations = (filled_dates_and_locations.drop(filled_dates_and_locations.iloc[2:],axis = 1)).index
+unique_temp = volunteers.groupby(['Shift start date','Job Location'], as_index=False).agg(['unique'])
+unique_temp = (unique_temp.drop(unique_temp.iloc[2:],axis = 1)).index
+i=0
+for row in unique_dates_and_locations:
+    if(row == filled_dates_and_locations[i]):
+        i+=1
+        continue
+    else:
+        # found a day/location that didn't have anyone signed up.
+        filled_slots_per_day.insert(i,0)
+        unique_v.loc[i-0.5] = [row[0],row[1],0]
+        unique_v = unique_v.sort_index().reset_index(drop=True)
+#i=0
+#do the same for unique volunteers per day/location
+#for row in unique_dates_and_locations:
+    #if(row == unique_temp[i]):
+        #i+=1
+        #continue
+    #else:
+        ## found a day/location that didn't have anyone signed up.
+        #unique_v.loc[i-0.5] = [row[0],row[1],0]
+        #unique_v = unique_v.sort_index().reset_index(drop=True)
 
-##########
-# upload to google sheets
-##########
-gsheet = pygsheets.authorize(service_file='./google_api_key.json')
-sheet = gsheet.open('USAU Nationals 2021 Volunteers')
+unfilled_slots_stats = [slots_per_day[i]-filled_slots_per_day[i] for i in range(len(slots_per_day))]
+
+# sum up all the columns
+slots_per_day.append(reduce(lambda a, b: a+b, slots_per_day))
+filled_slots_per_day.append(reduce(lambda a, b: a+b, filled_slots_per_day))
+unfilled_slots_stats.append(reduce(lambda a, b: a+b, unfilled_slots_stats))
+
+# calculate the percents
+filled_percentage = [filled_slots_per_day[i]/slots_per_day[i] for i in range(len(slots_per_day))]
+
+# make one matrix for all the slot stats
+filled_slots_stats = list(zip(filled_slots_per_day,unfilled_slots_stats,slots_per_day,filled_percentage))
+
+###############################################################################################################################################################
+################################################# upload to google sheets
+###############################################################################################################################################################
+gsheet = pygsheets.authorize(service_file='./usau-club-nationals-volunteers-61aca3eb7368.json')
+sheet = gsheet.open('USAU Nationals 2022 Volunteers')
+#sheet = gsheet.open('USAU Nationals 2021 Volunteers')
 #sheet = gsheet.open('USAU Nationals 2019 Volunteers')
 
 try:
@@ -198,8 +267,8 @@ try:
     #sheet.del_worksheet(worksheet)
     worksheet = sheet.worksheet("title", "stats_autogen")
     sheet.del_worksheet(worksheet)
-    worksheet = sheet.worksheet("title", "volunteers_autogen")
-    sheet.del_worksheet(worksheet)
+    #worksheet = sheet.worksheet("title", "volunteers_autogen")
+    #sheet.del_worksheet(worksheet)
     worksheet = sheet.worksheet("title", "volunteers_by_signup_autogen")
     sheet.del_worksheet(worksheet)
     worksheet = sheet.worksheet("title", "checkin_autogen")
@@ -210,17 +279,17 @@ except Exception:
     pass
 
 # add the raw volunteers data in a tab
-worksheet = sheet.add_worksheet("volunteers_autogen")
-worksheet.set_dataframe(volunteers, pygsheets.Address("A1"))
-worksheet.adjust_column_width(start=1, end=40, pixel_size=None)
-worksheet.update_dimensions_visibility(start=1, end=2, dimension="COLUMNS", hidden=True) # Event, Event Location
-worksheet.update_dimensions_visibility(start=5, end=7, dimension="COLUMNS", hidden=True) # Job Description, Job Notes, Job Rate
-worksheet.update_dimensions_visibility(start=10, dimension="COLUMNS", hidden=True) # Shift End Date
-worksheet.update_dimensions_visibility(start=12, end=24, dimension="COLUMNS", hidden=True) # lots
-worksheet.update_dimensions_visibility(start=27, end=29, dimension="COLUMNS", hidden=True) # lots
-worksheet.update_dimensions_visibility(start=35, dimension="COLUMNS", hidden=True)
-worksheet.update_dimensions_visibility(start=37, dimension="COLUMNS", hidden=True)
-worksheet.frozen_rows = 1
+#worksheet = sheet.add_worksheet("volunteers_autogen")
+#worksheet.set_dataframe(volunteers, pygsheets.Address("A1"))
+#worksheet.adjust_column_width(start=1, end=40, pixel_size=None)
+#worksheet.update_dimensions_visibility(start=1, end=2, dimension="COLUMNS", hidden=True) # Event, Event Location
+#worksheet.update_dimensions_visibility(start=5, end=7, dimension="COLUMNS", hidden=True) # Job Description, Job Notes, Job Rate
+#worksheet.update_dimensions_visibility(start=10, dimension="COLUMNS", hidden=True) # Shift End Date
+#worksheet.update_dimensions_visibility(start=12, end=24, dimension="COLUMNS", hidden=True) # lots
+#worksheet.update_dimensions_visibility(start=27, end=30, dimension="COLUMNS", hidden=True) # lots
+#worksheet.update_dimensions_visibility(start=36, dimension="COLUMNS", hidden=True)
+#worksheet.update_dimensions_visibility(start=38, dimension="COLUMNS", hidden=True)
+#worksheet.frozen_rows = 1
 
 # add the raw volunteers data sorted by [signup date, signup time]
 volunteers['Signup Time'] = volunteers.apply(lambda row : convert_time(row['Signup Time'], True), axis = 1)
@@ -236,9 +305,9 @@ worksheet.update_dimensions_visibility(start=1, end=2, dimension="COLUMNS", hidd
 worksheet.update_dimensions_visibility(start=5, end=7, dimension="COLUMNS", hidden=True) # Job Description, Job Notes, Job Rate
 worksheet.update_dimensions_visibility(start=10, dimension="COLUMNS", hidden=True) # Shift End Date
 worksheet.update_dimensions_visibility(start=12, end=24, dimension="COLUMNS", hidden=True) # lots
-worksheet.update_dimensions_visibility(start=27, end=29, dimension="COLUMNS", hidden=True) # lots
-worksheet.update_dimensions_visibility(start=35, dimension="COLUMNS", hidden=True)
-worksheet.update_dimensions_visibility(start=37, dimension="COLUMNS", hidden=True)
+worksheet.update_dimensions_visibility(start=27, end=30, dimension="COLUMNS", hidden=True) # lots
+worksheet.update_dimensions_visibility(start=36, dimension="COLUMNS", hidden=True)
+worksheet.update_dimensions_visibility(start=38, dimension="COLUMNS", hidden=True)
 worksheet.frozen_rows = 1
 
 # not sure how to do conditional formatting with a gradient curve
@@ -270,30 +339,39 @@ worksheet.update_dimensions_visibility(start=1, end=2, dimension="COLUMNS", hidd
 worksheet.update_dimensions_visibility(start=5, end=7, dimension="COLUMNS", hidden=True) # Job Description, Job Notes, Job Rate
 worksheet.update_dimensions_visibility(start=10, dimension="COLUMNS", hidden=True) # Shift End Date
 worksheet.update_dimensions_visibility(start=12, end=30, dimension="COLUMNS", hidden=True) # lots
-worksheet.update_dimensions_visibility(start=34, end=37, dimension="COLUMNS", hidden=True) # lots
+worksheet.update_dimensions_visibility(start=32, dimension="COLUMNS", hidden=True) # lots
+worksheet.update_dimensions_visibility(start=35, end=40, dimension="COLUMNS", hidden=True) # lots
 worksheet.frozen_rows = 1
 
 ######
 # add some stats
 worksheet = sheet.add_worksheet("stats_autogen", rows=400)
+output_row=1
 
 # number of unique volunteers
-worksheet.update_value("A1", "Unique Volunteers")
-worksheet.update_value("B1", len(pandas.unique(volunteers['Volunteer Identifier'])))
-
-# daily unique volunteers
-worksheet.update_value("A3", "Daily Unique Volunteers")
-worksheet.set_dataframe(unique_v, "A4")
+worksheet.update_value("A"+str(output_row), "Unique Volunteers")
+output_row += 1
+worksheet.set_dataframe(unique_v, "A"+str(output_row))
+filled_slots_stats = pandas.DataFrame(filled_slots_stats)
+filled_slots_stats.columns=["Filled Slots","Unfilled Slots","Total Slots","Filled Percent"]
+worksheet.set_dataframe(filled_slots_stats, "D"+str(output_row))
+output_row += len(unique_v)+1
+worksheet.update_value("A"+str(output_row), "All Days")
+worksheet.update_value("B"+str(output_row), "All Locations")
+worksheet.update_value("C"+str(output_row), len(pandas.unique(volunteers['Volunteer Identifier']))) # total unique volunteers
 
 # t-shirt counts
-worksheet.update_value("E3", "T-Shirts")
-worksheet.set_dataframe(tshirt_count, "E4")
+worksheet.update_value("I1", "T-Shirts")
+worksheet.set_dataframe(tshirt_count, "I2")
+
+#output_row += len(unique_v) if (len(unique_v) > len(tshirt_count)) else len(tshirt_count)
+output_row += 2
 
 # hours worked per volunteer
-worksheet.update_value("A13", "Hours worked\nper volunteer")
-worksheet.set_dataframe(hours_worked, "A14")
-output_row = 14+len(hours_worked)
-output_row += 2
+worksheet.update_value("A"+str(output_row), "Hours worked\nper volunteer")
+worksheet.set_dataframe(hours_worked, "A"+str(output_row+1))
+output_row = 16+len(hours_worked)
+#output_row += 2
 
 worksheet.update_value("B"+str(output_row), "Average")
 worksheet.update_value("C"+str(output_row), avg_hours_worked)
