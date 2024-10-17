@@ -1,135 +1,131 @@
-Task,Job Location,Date,Start Time,End Time,Spots,Duration,updated
-Admissions Staff (Polo Fields),Polo Fields,2023/10/19,7:15 AM,11:00 AM,3,3:45:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/19,10:45 AM,1:00 PM,3,2:15:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/19,12:45 PM,3:00 PM,3,2:15:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/19,2:45 PM,5:00 PM,3,2:15:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/20,7:15 AM,11:00 AM,3,3:45:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/20,10:45 AM,1:00 PM,3,2:15:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/20,12:45 PM,3:00 PM,3,2:15:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/20,2:45 PM,5:00 PM,3,2:15:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/21,7:15 AM,11:00 AM,3,3:45:00,x
-Admissions Staff (Polo Fields),Polo Fields,2023/10/21,10:45 AM,1:00 PM,3,2:15:00,x
-Admissions Staff (Stadium),Stadium,2023/10/21,10:15 AM,1:15 PM,3,3:00:00,x
-Admissions Staff (Stadium),Stadium,2023/10/21,1:00 PM,4:00 PM,3,3:00:00,x
-Admissions Staff (Stadium),Stadium,2023/10/21,3:45 PM,6:45 PM,3,3:00:00,x
-Admissions Staff (Stadium),Stadium,2023/10/21,6:30 PM,8:45 PM,3,2:15:00,x
-Admissions Staff (Stadium),Stadium,2023/10/22,8:45 AM,12:30 PM,3,3:45:00,x
-Admissions Staff (Stadium),Stadium,2023/10/22,12:15 PM,3:00 PM,3,2:45:00,x
-Admissions Staff (Stadium),Stadium,2023/10/22,2:45 PM,5:30 PM,3,2:45:00,x
-Crowd Management (Stadium),Stadium,2023/10/21,11:00 AM,1:30 PM,5,2:30:00,x
-Crowd Management (Stadium),Stadium,2023/10/21,1:30 PM,4:00 PM,5,2:30:00,x
-Crowd Management (Stadium),Stadium,2023/10/21,4:00 PM,6:30 PM,5,2:30:00,x
-Crowd Management (Stadium),Stadium,2023/10/21,6:30 PM,8:45 PM,5,2:15:00,x
-Crowd Management (Stadium),Stadium,2023/10/22,9:30 AM,12:30 PM,5,3:00:00,x
-Crowd Management (Stadium),Stadium,2023/10/22,12:30 PM,3:00 PM,5,2:30:00,x
-Crowd Management (Stadium),Stadium,2023/10/22,2:45 PM,5:30 PM,5,2:45:00,x
-Field Setup/Teardown (Polo Fields),Polo Fields,2023/10/18,9:00 AM,11:00 AM,6,2:00:00,x
-Field Setup/Teardown (Polo Fields),Polo Fields,2023/10/21,11:00 AM,1:00 PM,10,2:00:00,x
-Field Setup/Teardown (Stadium),Stadium,2023/10/20,9:00 AM,12:00 PM,2,3:00:00,x
-Field Setup/Teardown (Stadium),Stadium,2023/10/20,12:00 PM,3:00 PM,2,3:00:00,x
-Field Setup/Teardown (Stadium),Stadium,2023/10/22,4:30 PM,6:00 PM,10,1:30:00,x
-Fields & Water Crew (Polo Fields),Polo Fields,2023/10/19,8:15 AM,11:30 AM,4,3:15:00,x
-Fields & Water Crew (Polo Fields),Polo Fields,2023/10/19,11:30 AM,3:00 PM,4,3:30:00,x
-Fields & Water Crew (Polo Fields),Polo Fields,2023/10/19,3:00 PM,6:30 PM,4,3:30:00,x
-Fields & Water Crew (Polo Fields),Polo Fields,2023/10/20,8:15 AM,11:30 AM,4,3:15:00,x
-Fields & Water Crew (Polo Fields),Polo Fields,2023/10/20,11:30 AM,3:00 PM,4,3:30:00,x
-Fields & Water Crew (Polo Fields),Polo Fields,2023/10/20,3:00 PM,7:00 PM,4,4:00:00,x
-Fields & Water Crew (Polo Fields),Polo Fields,2023/10/21,8:15 AM,11:30 AM,2,3:15:00,x
-Fields & Water Crew (Polo Fields),Polo Fields,2023/10/21,10:45 AM,1:00 PM,2,2:15:00,x
-Fields & Water Crew (Stadium),Stadium,2023/10/21,9:45 AM,12:45 PM,2,3:00:00,x
-Fields & Water Crew (Stadium),Stadium,2023/10/21,12:45 PM,3:45 PM,2,3:00:00,x
-Fields & Water Crew (Stadium),Stadium,2023/10/21,3:45 PM,6:45 PM,2,3:00:00,x
-Fields & Water Crew (Stadium),Stadium,2023/10/21,6:45 PM,8:45 PM,2,2:00:00,x
-Fields & Water Crew (Stadium),Stadium,2023/10/22,8:30 AM,12:00 PM,2,3:30:00,x
-Fields & Water Crew (Stadium),Stadium,2023/10/22,12:00 PM,3:30 PM,2,3:30:00,x
-Fields & Water Crew (Stadium),Stadium,2023/10/22,3:30 PM,6:00 PM,2,2:30:00,x
-HOF Registration (Hilton),Hilton,2023/10/19,4:00 PM,6:30 PM,2,2:30:00,x
-HOF Registration (Hilton),Hilton,2023/10/20,5:15 PM,7:00 PM,2,1:45:00,x
-HOF Registration (Hilton),Hilton,2023/10/21,7:45 PM,9:45 PM,2,2:00:00,x
-Hospitality Driver (Polo Fields),Polo Fields,2023/10/19,8:00 AM,1:00 PM,2,5:00:00,x
-Hospitality Driver (Polo Fields),Polo Fields,2023/10/19,1:00 PM,6:00 PM,2,5:00:00,x
-Hospitality Driver (Polo Fields),Polo Fields,2023/10/20,8:00 AM,1:00 PM,2,5:00:00,x
-Hospitality Driver (Polo Fields),Polo Fields,2023/10/20,1:00 PM,6:00 PM,2,5:00:00,x
-Hospitality Driver (Polo Fields),Polo Fields,2023/10/21,8:00 AM,12:00 PM,2,4:00:00,x
-Hospitality Driver (Stadium),Stadium,2023/10/21,11:00 AM,2:30 PM,1,3:30:00,x
-Hospitality Driver (Stadium),Stadium,2023/10/21,2:30 PM,5:45 PM,1,3:15:00,x
-Hospitality Driver (Stadium),Stadium,2023/10/21,5:45 PM,9:00 PM,1,3:15:00,x
-Hospitality Driver (Stadium),Stadium,2023/10/22,9:00 AM,1:00 PM,1,4:00:00,x
-Hospitality Driver (Stadium),Stadium,2023/10/22,1:00 PM,5:00 PM,1,4:00:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/19,8:45 AM,11:00 AM,3,2:15:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/19,11:00 AM,1:15 PM,3,2:15:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/19,1:15 PM,3:30 PM,3,2:15:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/19,3:30 PM,5:45 PM,3,2:15:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/20,8:45 AM,11:00 AM,3,2:15:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/20,11:45 AM,1:30 PM,3,1:45:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/20,1:30 PM,3:45 PM,3,2:15:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/20,3:45 PM,6:00 PM,3,2:15:00,x
-Miscellaneous (Polo Fields),Polo Fields,2023/10/21,8:45 AM,11:45 AM,3,3:00:00,x
-Miscellaneous (Stadium),Stadium,2023/10/21,10:30 AM,1:15 PM,2,2:45:00,x
-Miscellaneous (Stadium),Stadium,2023/10/21,1:15 PM,3:45 PM,2,2:30:00,x
-Miscellaneous (Stadium),Stadium,2023/10/21,3:45 PM,6:15 PM,2,2:30:00,x
-Miscellaneous (Stadium),Stadium,2023/10/21,6:15 PM,8:45 PM,2,2:30:00,x
-Miscellaneous (Stadium),Stadium,2023/10/22,8:30 AM,11:30 AM,2,3:00:00,x
-Miscellaneous (Stadium),Stadium,2023/10/22,11:30 AM,2:30 PM,2,3:00:00,x
-Miscellaneous (Stadium),Stadium,2023/10/22,2:30 PM,5:30 PM,2,3:00:00,x
-Player Dinner Assistant (Stadium),Stadium,2023/10/21,3:30 PM,5:45 PM,5,2:15:00,x
-Player Dinner Assistant (Stadium),Stadium,2023/10/21,5:30 PM,7:30 PM,5,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/19,8:45 AM,10:45 AM,18,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/19,11:00 AM,1:00 PM,18,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/19,1:15 PM,3:15 PM,18,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/19,3:30 PM,5:30 PM,18,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/20,8:45 AM,10:45 AM,18,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/20,11:30 AM,1:30 PM,18,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/20,1:45 PM,3:45 PM,12,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/20,4:00 PM,6:00 PM,12,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/21,8:45 AM,10:45 AM,15,2:00:00,x
-Scorekeeper (Polo Fields),Polo Fields,2023/10/21,11:00 AM,1:00 PM,3,2:00:00,x
-Scorekeeper (Semis/Finals) (Polo Fields),Polo Fields,2023/10/21,10:00 AM,11:45 AM,1,1:45:00,x
-Scorekeeper (Semis/Finals) (Polo Fields),Polo Fields,2023/10/21,12:15 PM,2:00 PM,1,1:45:00,x
-Scorekeeper (Semis/Finals) (Stadium),Stadium,2023/10/21,11:30 AM,1:15 PM,1,1:45:00,x
-Scorekeeper (Semis/Finals) (Stadium),Stadium,2023/10/21,2:00 PM,3:45 PM,1,1:45:00,x
-Scorekeeper (Semis/Finals) (Stadium),Stadium,2023/10/21,4:30 PM,6:15 PM,1,1:45:00,x
-Scorekeeper (Semis/Finals) (Stadium),Stadium,2023/10/21,6:45 PM,8:30 PM,1,1:45:00,x
-Scorekeeper (Semis/Finals) (Stadium),Stadium,2023/10/22,9:45 AM,11:45 AM,1,2:00:00,x
-Scorekeeper (Semis/Finals) (Stadium),Stadium,2023/10/22,12:15 PM,2:15 PM,1,2:00:00,x
-Scorekeeper (Semis/Finals) (Stadium),Stadium,2023/10/22,2:45 PM,4:45 PM,1,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/19,8:45 AM,10:45 AM,18,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/19,11:00 AM,1:00 PM,18,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/19,1:15 PM,3:15 PM,18,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/19,3:30 PM,5:30 PM,18,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/20,8:45 AM,10:45 AM,18,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/20,11:30 AM,1:30 PM,18,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/20,1:45 PM,3:45 PM,12,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/20,4:00 PM,6:00 PM,12,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/21,8:45 AM,10:45 AM,15,2:00:00,x
-Statkeeper (Polo Fields),Polo Fields,2023/10/21,11:00 AM,1:00 PM,3,2:00:00,x
-Statkeeper (Semis/Finals) (Polo Fields),Polo Fields,2023/10/21,10:00 AM,11:45 AM,1,1:45:00,x
-Statkeeper (Semis/Finals) (Polo Fields),Polo Fields,2023/10/21,12:15 PM,2:00 PM,1,1:45:00,x
-Statkeeper (Semis/Finals) (Stadium),Stadium,2023/10/21,11:30 AM,1:15 PM,5,1:45:00,x
-Statkeeper (Semis/Finals) (Stadium),Stadium,2023/10/21,2:00 PM,3:45 PM,5,1:45:00,x
-Statkeeper (Semis/Finals) (Stadium),Stadium,2023/10/21,4:30 PM,6:15 PM,5,1:45:00,x
-Statkeeper (Semis/Finals) (Stadium),Stadium,2023/10/21,6:45 PM,8:30 PM,5,1:45:00,x
-Statkeeper (Semis/Finals) (Stadium),Stadium,2023/10/22,9:45 AM,11:45 AM,5,2:00:00,x
-Statkeeper (Semis/Finals) (Stadium),Stadium,2023/10/22,12:15 PM,2:15 PM,5,2:00:00,x
-Statkeeper (Semis/Finals) (Stadium),Stadium,2023/10/22,2:45 PM,4:45 PM,5,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/19,8:45 AM,10:45 AM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/19,11:00 AM,1:00 PM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/19,1:15 PM,3:15 PM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/19,3:30 PM,5:30 PM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/20,8:45 AM,10:45 AM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/20,11:15 AM,1:15 PM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/20,1:45 PM,3:45 PM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/20,4:00 PM,6:00 PM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/21,8:45 AM,10:45 AM,1,2:00:00,x
-Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2023/10/21,11:00 AM,1:00 PM,1,2:00:00,x
-Statkeeper (UW Semis) (Polo Fields),Polo Fields,2023/10/21,10:00 AM,11:45 AM,1,1:45:00,x
-Statkeeper (UW Semis) (Polo Fields),Polo Fields,2023/10/21,12:15 PM,2:00 PM,1,1:45:00,x
-Store Runner (Polo Fields),Polo Fields,2023/10/19,7:00 AM,12:00 PM,1,5:00:00,x
-Store Runner (Polo Fields),Polo Fields,2023/10/19,12:00 PM,5:00 PM,1,5:00:00,x
-Store Runner (Polo Fields),Polo Fields,2023/10/20,7:00 AM,12:00 PM,1,5:00:00,x
-Store Runner (Polo Fields),Polo Fields,2023/10/20,12:00 PM,5:00 PM,1,5:00:00,x
-Store Runner (Polo Fields),Polo Fields,2023/10/21,7:00 AM,12:00 PM,1,5:00:00,x
-Store Runner (Stadium),Stadium,2023/10/21,10:30 AM,3:30 PM,1,5:00:00,x
-Store Runner (Stadium),Stadium,2023/10/21,3:30 PM,7:30 PM,1,4:00:00,x
-Store Runner (Stadium),Stadium,2023/10/22,8:30 AM,1:30 PM,1,5:00:00,x
-Youth Clinic Assistant Coach (Polo Fields),Polo Fields,2023/10/21,8:45 AM,11:00 AM,4,2:15:00,
+Task,Job Location,Date,Start Time,End Time,Spots,Duration,website updated
+Admissions Staff (Polo Fields),Polo Fields,2024/10/24,7:15 AM,11:00 AM,3,3:45:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/24,10:45 AM,1:00 PM,3,2:15:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/24,12:45 PM,3:00 PM,3,2:15:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/24,2:45 PM,5:00 PM,3,2:15:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/25,7:15 AM,11:00 AM,3,3:45:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/25,10:45 AM,1:00 PM,3,2:15:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/25,12:45 PM,3:00 PM,3,2:15:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/25,2:45 PM,5:00 PM,3,2:15:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/26,7:15 AM,10:00 AM,3,2:45:00,x
+Admissions Staff (Polo Fields),Polo Fields,2024/10/26,9:45 AM,12:00 PM,3,2:15:00,x
+Admissions Staff (Stadium),Stadium,2024/10/26,11:15 AM,1:45 PM,3,2:30:00,x
+Admissions Staff (Stadium),Stadium,2024/10/26,1:30 PM,4:00 PM,3,2:30:00,x
+Admissions Staff (Stadium),Stadium,2024/10/26,3:45 PM,6:30 PM,3,2:45:00,x
+Admissions Staff (Stadium),Stadium,2024/10/26,6:15 PM,8:45 PM,3,2:30:00,x
+Admissions Staff (Stadium),Stadium,2024/10/27,8:45 AM,11:30 AM,3,2:45:00,x
+Admissions Staff (Stadium),Stadium,2024/10/27,11:15 AM,2:00 PM,3,2:45:00,x
+Admissions Staff (Stadium),Stadium,2024/10/27,1:45 PM,4:30 PM,3,2:45:00,x
+Crowd Management (Stadium),Stadium,2024/10/26,12:00 PM,2:30 PM,5,2:30:00,x
+Crowd Management (Stadium),Stadium,2024/10/26,2:30 PM,4:45 PM,5,2:15:00,x
+Crowd Management (Stadium),Stadium,2024/10/26,4:45 PM,7:00 PM,5,2:15:00,x
+Crowd Management (Stadium),Stadium,2024/10/26,7:00 PM,9:15 PM,5,2:15:00,x
+Crowd Management (Stadium),Stadium,2024/10/27,8:45 AM,12:00 PM,5,3:15:00,x
+Crowd Management (Stadium),Stadium,2024/10/27,12:00 PM,2:30 PM,5,2:30:00,x
+Crowd Management (Stadium),Stadium,2024/10/27,2:30 PM,5:00 PM,5,2:30:00,x
+Field Setup/Teardown (Polo Fields),Polo Fields,2024/10/23,9:00 AM,11:00 AM,6,2:00:00,x
+Field Setup/Teardown (Polo Fields),Polo Fields,2024/10/26,11:00 AM,1:00 PM,10,2:00:00,x
+Field Setup/Teardown (Stadium),Stadium,2024/10/25,9:00 AM,12:00 PM,2,3:00:00,x
+Field Setup/Teardown (Stadium),Stadium,2024/10/25,12:00 PM,3:00 PM,2,3:00:00,x
+Field Setup/Teardown (Stadium),Stadium,2024/10/27,4:15 PM,5:45 PM,10,1:30:00,x
+Fields & Water Crew (Polo Fields),Polo Fields,2024/10/24,8:15 AM,11:30 AM,4,3:15:00,x
+Fields & Water Crew (Polo Fields),Polo Fields,2024/10/24,11:30 AM,3:00 PM,4,3:30:00,x
+Fields & Water Crew (Polo Fields),Polo Fields,2024/10/24,3:00 PM,6:30 PM,4,3:30:00,x
+Fields & Water Crew (Polo Fields),Polo Fields,2024/10/25,8:15 AM,11:30 AM,4,3:15:00,x
+Fields & Water Crew (Polo Fields),Polo Fields,2024/10/25,11:30 AM,3:00 PM,4,3:30:00,x
+Fields & Water Crew (Polo Fields),Polo Fields,2024/10/25,3:00 PM,7:00 PM,4,4:00:00,x
+Fields & Water Crew (Polo Fields),Polo Fields,2024/10/26,8:15 AM,11:30 AM,2,3:15:00,x
+Fields & Water Crew (Polo Fields),Polo Fields,2024/10/26,10:45 AM,1:00 PM,2,2:15:00,x
+Fields & Water Crew (Stadium),Stadium,2024/10/26,10:15 AM,12:45 PM,2,2:30:00,x
+Fields & Water Crew (Stadium),Stadium,2024/10/26,12:45 PM,3:45 PM,2,3:00:00,x
+Fields & Water Crew (Stadium),Stadium,2024/10/26,3:45 PM,6:45 PM,2,3:00:00,x
+Fields & Water Crew (Stadium),Stadium,2024/10/26,6:45 PM,9:15 PM,2,2:30:00,x
+Fields & Water Crew (Stadium),Stadium,2024/10/27,8:00 AM,12:00 PM,2,4:00:00,x
+Fields & Water Crew (Stadium),Stadium,2024/10/27,12:00 PM,2:30 PM,2,2:30:00,x
+Fields & Water Crew (Stadium),Stadium,2024/10/27,2:30 PM,5:00 PM,2,2:30:00,x
+Hospitality Driver (Polo Fields),Polo Fields,2024/10/24,8:00 AM,1:00 PM,2,5:00:00,x
+Hospitality Driver (Polo Fields),Polo Fields,2024/10/24,1:00 PM,6:00 PM,2,5:00:00,x
+Hospitality Driver (Polo Fields),Polo Fields,2024/10/25,8:00 AM,1:00 PM,2,5:00:00,x
+Hospitality Driver (Polo Fields),Polo Fields,2024/10/25,1:00 PM,6:00 PM,2,5:00:00,x
+Hospitality Driver (Polo Fields),Polo Fields,2024/10/26,8:00 AM,1:00 PM,2,5:00:00,x
+Hospitality Driver (Stadium),Stadium,2024/10/26,11:00 AM,2:30 PM,1,3:30:00,x
+Hospitality Driver (Stadium),Stadium,2024/10/26,2:30 PM,5:45 PM,1,3:15:00,x
+Hospitality Driver (Stadium),Stadium,2024/10/26,5:45 PM,9:00 PM,1,3:15:00,x
+Hospitality Driver (Stadium),Stadium,2024/10/27,9:00 AM,1:00 PM,1,4:00:00,x
+Hospitality Driver (Stadium),Stadium,2024/10/27,1:00 PM,5:00 PM,1,4:00:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/24,8:45 AM,11:00 AM,3,2:15:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/24,11:00 AM,1:15 PM,3,2:15:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/24,1:15 PM,3:30 PM,3,2:15:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/24,3:30 PM,5:45 PM,3,2:15:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/25,8:45 AM,11:00 AM,3,2:15:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/25,11:45 AM,1:30 PM,3,1:45:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/25,1:30 PM,3:45 PM,3,2:15:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/25,3:45 PM,6:00 PM,3,2:15:00,x
+Miscellaneous (Polo Fields),Polo Fields,2024/10/26,8:45 AM,11:45 AM,3,3:00:00,x
+Miscellaneous (Stadium),Stadium,2024/10/26,11:30 AM,1:45 PM,2,2:15:00,x
+Miscellaneous (Stadium),Stadium,2024/10/26,1:45 PM,4:00 PM,2,2:15:00,x
+Miscellaneous (Stadium),Stadium,2024/10/26,4:00 PM,6:15 PM,2,2:15:00,x
+Miscellaneous (Stadium),Stadium,2024/10/26,6:15 PM,9:00 PM,2,2:45:00,x
+Miscellaneous (Stadium),Stadium,2024/10/27,9:00 AM,11:30 AM,2,2:30:00,x
+Miscellaneous (Stadium),Stadium,2024/10/27,11:30 AM,2:30 PM,2,3:00:00,x
+Miscellaneous (Stadium),Stadium,2024/10/27,2:30 PM,5:00 PM,2,2:30:00,x
+Player Dinner Assistant (Stadium),Stadium,2024/10/26,3:30 PM,5:45 PM,5,2:15:00,x
+Player Dinner Assistant (Stadium),Stadium,2024/10/26,5:30 PM,7:30 PM,5,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/24,8:45 AM,10:45 AM,18,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/24,11:00 AM,1:00 PM,18,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/24,1:15 PM,3:15 PM,18,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/24,3:30 PM,5:30 PM,18,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/25,8:45 AM,10:45 AM,18,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/25,11:30 AM,1:30 PM,18,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/25,1:45 PM,3:45 PM,14,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/25,4:00 PM,6:00 PM,10,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/26,8:45 AM,10:45 AM,13,2:00:00,x
+Scorekeeper (Polo Fields),Polo Fields,2024/10/26,11:00 AM,1:00 PM,5,2:00:00,x
+Scorekeeper (Semis/Finals) (Polo Fields),Polo Fields,2024/10/26,8:45 AM,10:45 AM,1,2:00:00,x
+Scorekeeper (Semis/Finals) (Polo Fields),Polo Fields,2024/10/26,11:00 AM,1:00 PM,1,2:00:00,x
+Scorekeeper (Semis/Finals) (Stadium),Stadium,2024/10/26,12:15 PM,2:15 PM,1,2:00:00,x
+Scorekeeper (Semis/Finals) (Stadium),Stadium,2024/10/26,2:30 PM,4:30 PM,1,2:00:00,x
+Scorekeeper (Semis/Finals) (Stadium),Stadium,2024/10/26,4:45 PM,6:45 PM,1,2:00:00,x
+Scorekeeper (Semis/Finals) (Stadium),Stadium,2024/10/26,7:00 PM,9:00 PM,1,2:00:00,x
+Scorekeeper (Semis/Finals) (Stadium),Stadium,2024/10/27,9:45 AM,11:45 AM,1,2:00:00,x
+Scorekeeper (Semis/Finals) (Stadium),Stadium,2024/10/27,12:15 PM,2:15 PM,1,2:00:00,x
+Scorekeeper (Semis/Finals) (Stadium),Stadium,2024/10/27,2:45 PM,4:45 PM,1,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/24,8:45 AM,10:45 AM,18,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/24,11:00 AM,1:00 PM,18,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/24,1:15 PM,3:15 PM,18,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/24,3:30 PM,5:30 PM,18,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/25,8:45 AM,10:45 AM,18,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/25,11:30 AM,1:30 PM,18,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/25,1:45 PM,3:45 PM,14,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/25,4:00 PM,6:00 PM,10,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/26,8:45 AM,10:45 AM,13,2:00:00,x
+Statkeeper (Polo Fields),Polo Fields,2024/10/26,11:00 AM,1:00 PM,5,2:00:00,x
+Statkeeper (Semis/Finals) (Polo Fields),Polo Fields,2024/10/26,8:45 AM,10:45 AM,1,2:00:00,x
+Statkeeper (Semis/Finals) (Polo Fields),Polo Fields,2024/10/26,11:00 AM,1:00 PM,1,2:00:00,x
+Statkeeper (Semis/Finals) (Stadium),Stadium,2024/10/26,12:15 PM,2:15 PM,5,2:00:00,x
+Statkeeper (Semis/Finals) (Stadium),Stadium,2024/10/26,2:30 PM,4:30 PM,5,2:00:00,x
+Statkeeper (Semis/Finals) (Stadium),Stadium,2024/10/26,4:45 PM,6:45 PM,5,2:00:00,x
+Statkeeper (Semis/Finals) (Stadium),Stadium,2024/10/26,7:00 PM,9:00 PM,5,2:00:00,x
+Statkeeper (Semis/Finals) (Stadium),Stadium,2024/10/27,9:45 AM,11:45 AM,5,2:00:00,x
+Statkeeper (Semis/Finals) (Stadium),Stadium,2024/10/27,12:15 PM,2:15 PM,5,2:00:00,x
+Statkeeper (Semis/Finals) (Stadium),Stadium,2024/10/27,2:45 PM,4:45 PM,5,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/24,8:45 AM,10:45 AM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/24,11:00 AM,1:00 PM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/24,1:15 PM,3:15 PM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/24,3:30 PM,5:30 PM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/25,8:45 AM,10:45 AM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/25,11:30 AM,1:30 PM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/25,1:45 PM,3:45 PM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/25,4:00 PM,6:00 PM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/26,8:45 AM,10:45 AM,1,2:00:00,x
+Statkeeper (Ultiworld) (Polo Fields),Polo Fields,2024/10/26,11:00 AM,1:00 PM,1,2:00:00,x
+Statkeeper (UW Semis) (Polo Fields),Polo Fields,2024/10/26,8:45 AM,10:45 AM,1,2:00:00,x
+Statkeeper (UW Semis) (Polo Fields),Polo Fields,2024/10/26,11:00 AM,1:00 PM,1,2:00:00,x
+Store Runner (Polo Fields),Polo Fields,2024/10/24,7:00 AM,12:00 PM,1,5:00:00,x
+Store Runner (Polo Fields),Polo Fields,2024/10/24,12:00 PM,5:00 PM,1,5:00:00,x
+Store Runner (Polo Fields),Polo Fields,2024/10/25,7:00 AM,12:00 PM,1,5:00:00,x
+Store Runner (Polo Fields),Polo Fields,2024/10/25,12:00 PM,5:00 PM,1,5:00:00,x
+Store Runner (Polo Fields),Polo Fields,2024/10/26,7:00 AM,12:00 PM,1,5:00:00,x
+Store Runner (Stadium),Stadium,2024/10/26,10:30 AM,3:30 PM,1,5:00:00,x
+Store Runner (Stadium),Stadium,2024/10/26,3:30 PM,8:30 PM,1,5:00:00,x
+Store Runner (Stadium),Stadium,2024/10/27,8:30 AM,1:30 PM,1,5:00:00,x

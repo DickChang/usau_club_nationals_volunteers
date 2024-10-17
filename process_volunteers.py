@@ -182,6 +182,7 @@ volunteers = volunteers[['Event', 'Task', 'Desc', 'Job Location', 'Quantity', 'D
 
 #####
 # read in all_jobs
+# MUST update the all_jobs tab of the sheet and then run get_jobs.py
 #####
 all_jobs_raw = pandas.read_csv(filepath_or_buffer="all_jobs.csv")
 #all_jobs_columns = all_jobs_raw.columns.delete(-1)
@@ -324,8 +325,9 @@ filled_slots_stats = list(zip(filled_slots_per_day,unfilled_slots_stats,slots_pe
 ###############################################################################################################################################################
 ################################################# upload to google sheets
 ###############################################################################################################################################################
-gsheet = pygsheets.authorize(service_file='./usau-club-nationals-volunteers-61aca3eb7368.json')
-sheet = gsheet.open('USAU Nationals 2023 Volunteers')
+gsheet = pygsheets.authorize(service_file='./google_api_key.json')
+sheet = gsheet.open('USAU Nationals 2024 Volunteers')
+#sheet = gsheet.open('USAU Nationals 2023 Volunteers')
 #sheet = gsheet.open('USAU Nationals 2022 Volunteers')
 #sheet = gsheet.open('USAU Nationals 2021 Volunteers')
 #sheet = gsheet.open('USAU Nationals 2019 Volunteers')

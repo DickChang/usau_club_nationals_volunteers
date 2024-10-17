@@ -3,7 +3,7 @@ import pandas
 import pygsheets
 
 gsheet = pygsheets.authorize(service_file='./usau-club-nationals-volunteers-61aca3eb7368.json')
-sheet = gsheet.open('USAU Nationals 2023 Volunteers')
+sheet = gsheet.open('USAU Nationals 2024 Volunteers')
 
 try:
     worksheet = sheet.worksheet("title", "all_jobs")
