@@ -118,17 +118,6 @@ if(foundError):
 tshirt_count = volunteers.groupby('Shirt size')['ID'].nunique()
 tshirt_count = pandas.DataFrame({"Size": tshirt_count.index, "Count": tshirt_count.array})
 
-# count the number of unique volunteers per day
-#unique_v = (volunteers.groupby(['Date','Job Location'], as_index=False)['Who']).nunique()
-#unique_v = unique_v.rename(columns={"Who": "Unique Volunteers"})
-unique_v = (volunteers.groupby(['Date','Job Location'], as_index=False)['ID']).nunique()
-unique_v = unique_v.rename(columns={"ID": "Unique Volunteers"})
-
-# TODO
-# count the number of filled slots per day
-#unique_per_day = pandas.DataFrame[volunteers['Shift start date'] == "2022-10-20" & volunteers['Job Location'] == "Polo Fields"]
-#print(unique_per_day)
-
 # count the number of hours worked per volunteer
 #hours_worked = (volunteers.groupby(['Who','First Name', 'Last Name'], as_index=False)['Hours tracking']).sum()
 hours_worked = (volunteers.groupby(['ID','First Name', 'Last Name'], as_index=False)['Hours tracking']).sum()
@@ -188,9 +177,14 @@ all_jobs_raw = pandas.read_csv(filepath_or_buffer="all_jobs.csv")
 #all_jobs_columns = all_jobs_raw.columns.delete(-1)
 all_jobs = pandas.DataFrame(columns=all_jobs_raw.columns)
 for i, r in all_jobs_raw.iterrows():
+    new_r = (r.drop(labels="Spots")).to_frame().T
+    new_r_list = [all_jobs]
     for spots in range(r["Spots"]):
-        all_jobs = all_jobs.append(r.drop(labels="Spots"), ignore_index=True)
+        #all_jobs = all_jobs._append(new_r, ignore_index=True) # append is deprecated. fix by using concat
+        new_r_list.append(new_r)
+    all_jobs = pandas.concat(new_r_list, axis=0, ignore_index=True)
 all_jobs = (all_jobs.reset_index()).drop(columns="index")
+#print(all_jobs)
 
 # change the timestamp to a sortable format
 all_jobs['Start Time'] = all_jobs.apply(lambda row : convert_time(row['Start Time'], True), axis = 1)
@@ -209,20 +203,26 @@ all_jobs['End Time'] = all_jobs.apply(lambda row : convert_time(row['End Time'],
 # if volunteers and all_jobs were hashed appropriately, we could do a dataframe outer merge instead
 temp_v = volunteers.copy()
 master_list = pandas.DataFrame(columns=volunteers.columns)
-for index_j in range(len(all_jobs)):
+#for index_j in range(len(all_jobs)):
+for i, r in all_jobs.iterrows():
     if(len(temp_v)==0):
-        master_list = master_list.append(all_jobs.loc[index_j])
+        #master_list = master_list._append(all_jobs.loc[index_j]) # append is deprecated. fix by using concat
+        master_list = pandas.concat([master_list, r.to_frame().T], axis=0, ignore_index=True)
         continue
     found = False
     for index_v, row in temp_v.iterrows():
-        if(compare_jobs(row, all_jobs.loc[index_j])):
-            row['Duration'] = all_jobs.loc[index_j]['Duration']
-            master_list = master_list.append(row)
+        #if(compare_jobs(row, all_jobs.loc[index_j])):
+        if(compare_jobs(row, r)):
+            #row['Duration'] = all_jobs.loc[index_j]['Duration']
+            row['Duration'] = r['Duration']
+            #master_list = master_list._append(row) # append is deprecated. fix by using concat
+            master_list = pandas.concat([master_list, row.to_frame().T], axis=0, ignore_index=True)
             temp_v = temp_v.drop(index_v)
             found = True
             break
     if(found==False):
-        master_list = master_list.append(all_jobs.loc[index_j])
+        #master_list = master_list._append(all_jobs.loc[index_j]) # append is deprecated. fix by using concat
+        master_list = pandas.concat([master_list, r.to_frame().T], axis=0, ignore_index=True)
 
 if(len(temp_v) != 0):
     print("ERROR: Not all volunteers were matched to a job")
@@ -231,7 +231,7 @@ if(len(temp_v) != 0):
     print(temp_v[['Task', 'Job Location', 'Date', 'Start Time', 'Email', 'First Name', 'Last Name']])
 
 # sort the master list in an order that makes sense for us
-master_list = master_list.fillna(value="")
+#master_list = master_list.fillna(value="") # generates warning about mixed data types. not sure if needed.
 master_list['Job Location'] = master_list.apply(lambda row : row['Job Location'].title(), axis = 1)
 master_list['Start Time'] = master_list.apply(lambda row : convert_time(row['Start Time'], True), axis = 1)
 master_list['End Time'] = master_list.apply(lambda row : convert_time(row['End Time'], True), axis = 1)
@@ -258,75 +258,64 @@ emails = emails.sort_values(
 #emails['Signup Time'] = emails.apply(lambda row : convert_time(row['Signup Time'], False), axis = 1)
 emails = emails.drop_duplicates(subset=['Email'])
 
+#####
 # Calculate the filled slots stats
-slots_per_day = (master_list.groupby(['Date','Job Location'], as_index=False).agg(['count']))[[('Event','count')]]
-slots_per_day.columns = slots_per_day.columns.get_level_values(0) + '_' +  slots_per_day.columns.get_level_values(1)
-slots_per_day = [x for x in slots_per_day["Event_count"]]
+all_days_and_locations = (master_list.groupby(['Date','Job Location'], as_index=False))
+#for day_and_location in all_days_and_locations.groups:
+    #print(day_and_location)
+    #print(all_days_and_locations.get_group(day_and_location).columns)
+    #print(all_days_and_locations.get_group(day_and_location))
+all_days_and_locations_agg = all_days_and_locations.agg(['count'])
+#print(all_days_and_locations_agg)
+#print(all_days_and_locations_agg.columns)
+filled_slots_per_day = all_days_and_locations_agg[[('Event','count')]]
+filled_slots_per_day = [x for x in filled_slots_per_day[('Event','count')]]
+#print(filled_slots_per_day)
 
-filled_slots_per_day = (volunteers.groupby(['Date','Job Location'], as_index=False).agg(['count']))[[('Event','count')]]
-filled_slots_per_day.columns = filled_slots_per_day.columns.get_level_values(0) + '_' +  filled_slots_per_day.columns.get_level_values(1)
-filled_slots_per_day = [x for x in filled_slots_per_day["Event_count"]]
+total_slots_per_day = all_days_and_locations_agg[[('Task','count')]]
+total_slots_per_day = [x for x in total_slots_per_day[('Task','count')]]
+#print(total_slots_per_day)
 
-# get all the unique date/location combos and align the "filled_slots_per_day" data by filling the empty day/locations with 0
-unique_dates_and_locations = master_list.groupby(['Date','Job Location'], as_index=False).agg(['unique'])
-unique_dates_and_locations = (unique_dates_and_locations.drop(unique_dates_and_locations.iloc[2:],axis = 1)).index
-filled_dates_and_locations = volunteers.groupby(['Date','Job Location'], as_index=False).agg(['unique'])
-filled_dates_and_locations = (filled_dates_and_locations.drop(filled_dates_and_locations.iloc[2:],axis = 1)).index
-unique_temp = volunteers.groupby(['Date','Job Location'], as_index=False).agg(['unique'])
-unique_temp = (unique_temp.drop(unique_temp.iloc[2:],axis = 1)).index
-all_days_filled = False
-while(not all_days_filled):
-    i=0
-    for row in unique_dates_and_locations:
-        if(row == filled_dates_and_locations[i]):
-            i+=1
-            continue
-        else:
-            # found a day/location that didn't have anyone signed up.
+# calculate the unique volunteers per day and location
+all_days_and_locations_unique = all_days_and_locations.agg(['unique'])
+unique_ids_per_day_and_location = all_days_and_locations_unique[[('ID','unique')]]
+#print(unique_ids_per_day_and_location)
+unique_volunteers = []
+for x in unique_ids_per_day_and_location[('ID','unique')]:
+    removed_nan = []
+    for y in x:
+        if y == y:
+            removed_nan.append(y)
+    #print(removed_nan)
+    unique_volunteers.append(len(removed_nan))
+#print(unique_volunteers)
+###
 
-            # find the spot where this entry should be inserted
-            while(compare_date_job(filled_dates_and_locations[i], row) == 0):
-                i+=1
-                if(len(filled_dates_and_locations) == i):
-                    break
-            filled_dates_and_locations=filled_dates_and_locations.insert(i, (row[0],row[1]))
-            filled_slots_per_day.insert(i,0)
-            unique_v.loc[i-0.5] = [row[0],row[1],0]
-            unique_v = unique_v.sort_index().reset_index(drop=True)
-            break
-    if(len(unique_dates_and_locations) == len(filled_dates_and_locations)):
-        all_days_filled = True
-#i=0
-#do the same for unique volunteers per day/location
-#for row in unique_dates_and_locations:
-    #if(row == unique_temp[i]):
-        #i+=1
-        #continue
-    #else:
-        ## found a day/location that didn't have anyone signed up.
-        #unique_v.loc[i-0.5] = [row[0],row[1],0]
-        #unique_v = unique_v.sort_index().reset_index(drop=True)
-
-unfilled_slots_stats = [slots_per_day[i]-filled_slots_per_day[i] for i in range(len(slots_per_day))]
+unfilled_slots_stats = [total_slots_per_day[i]-filled_slots_per_day[i] for i in range(len(total_slots_per_day))]
+#print(unfilled_slots_stats)
 
 # sum up all the columns
-slots_per_day.append(reduce(lambda a, b: a+b, slots_per_day))
+total_slots_per_day.append(reduce(lambda a, b: a+b, total_slots_per_day))
 filled_slots_per_day.append(reduce(lambda a, b: a+b, filled_slots_per_day))
 unfilled_slots_stats.append(reduce(lambda a, b: a+b, unfilled_slots_stats))
 
 # calculate the percents
-filled_percentage = [filled_slots_per_day[i]/slots_per_day[i] for i in range(len(slots_per_day))]
+filled_percentage = [filled_slots_per_day[i]/total_slots_per_day[i] for i in range(len(total_slots_per_day))]
+#print(filled_percentage)
 
 # make one matrix for all the slot stats
-filled_slots_stats = list(zip(filled_slots_per_day,unfilled_slots_stats,slots_per_day,filled_percentage))
+filled_slots_stats = list(zip(filled_slots_per_day,unfilled_slots_stats,total_slots_per_day,filled_percentage))
+#print(filled_slots_stats)
 
+# Calculate the filled slots stats
+#####
 
 
 ###############################################################################################################################################################
 ################################################# upload to google sheets
 ###############################################################################################################################################################
 gsheet = pygsheets.authorize(service_file='./google_api_key.json')
-sheet = gsheet.open('USAU Nationals 2024 Volunteers')
+sheet = gsheet.open('USAU Nationals 2025 Volunteers')
 #sheet = gsheet.open('USAU Nationals 2023 Volunteers')
 #sheet = gsheet.open('USAU Nationals 2022 Volunteers')
 #sheet = gsheet.open('USAU Nationals 2021 Volunteers')
@@ -418,14 +407,18 @@ worksheet.frozen_rows = 1
 worksheet = sheet.add_worksheet("stats_autogen", rows=400)
 output_row=1
 
+# print dates and job locations
+all_days_and_locations_df = pandas.DataFrame([x for x in all_days_and_locations.groups], columns = ["Date", "Job Location"])
+worksheet.set_dataframe(all_days_and_locations_df, "A"+str(output_row))
+
 # number of unique volunteers
-worksheet.update_value("A"+str(output_row), "Unique Volunteers")
-output_row += 1
-worksheet.set_dataframe(unique_v, "A"+str(output_row))
+unique_volunteers_df = pandas.DataFrame(unique_volunteers, columns=["Unique Volunteers"])
+worksheet.set_dataframe(unique_volunteers_df, "C"+str(output_row))
+
 filled_slots_stats = pandas.DataFrame(filled_slots_stats)
 filled_slots_stats.columns=["Filled Slots","Unfilled Slots","Total Slots","Filled Percent"]
 worksheet.set_dataframe(filled_slots_stats, "D"+str(output_row))
-output_row += len(unique_v)+1
+output_row += len(unique_volunteers)+1
 worksheet.update_value("A"+str(output_row), "All Days")
 worksheet.update_value("B"+str(output_row), "All Locations")
 worksheet.update_value("C"+str(output_row), len(pandas.unique(volunteers['Who']))) # total unique volunteers
